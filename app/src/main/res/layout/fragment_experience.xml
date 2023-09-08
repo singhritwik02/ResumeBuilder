@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:weightSum="100"
+    tools:context=".fragments.ExperienceFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:orientation="horizontal"
+        android:layout_weight="20"
+        android:background="@drawable/purple_background"
+        android:id="@+id/fe_TopLayout"
+        >
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="60"
+            android:layout_height="wrap_content"
+            android:text="Experience"
+            android:fontFamily="@font/nunito_bold"
+            android:textSize="32sp"
+            android:textColor="@color/white"
+            android:layout_gravity="center"
+            android:layout_marginStart="16dp"
+            android:transitionName="transition_Title"
+
+            />
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:src="@drawable/experience_image"
+            android:layout_weight="40"
+            android:layout_gravity="center"
+            android:layout_margin="8dp"
+            android:transitionName="transition_Image"
+            />
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="70"
+        android:orientation="vertical"
+        >
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Long press an item to delete"
+            android:fontFamily="@font/quicksand_medium"
+            android:textAlignment="center"
+            android:layout_margin="8dp"
+            android:id="@+id/fe_LongPressLabel"
+            android:textColor="@android:color/darker_gray"
+            />
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/baseline_add_circle_24"
+            android:layout_margin="16dp"
+            android:layout_gravity="end"
+            android:id="@+id/fe_AddButton"
+            app:tint="@color/darkPurple" />
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/fe_RecyclerView"
+            android:layout_width="match_parent"
+            android:layoutAnimation="@anim/basic_layout_animation"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:layout_gravity="center"
+            android:background="?android:windowBackground" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:id="@+id/fe_FresherLayout"
+            android:layout_gravity="bottom"
+
+            >
+            <ImageView
+                android:layout_width="250dp"
+                android:layout_height="250dp"
+                android:src="@drawable/fresher"
+                android:layout_gravity="center"
+                />
+            <TextView
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:padding="16dp"
+                android:text="Fresher"
+                android:fontFamily="@font/nunito_bold"
+                android:textSize="18sp"
+                android:textColor="@color/black"
+                />
+        </LinearLayout>
+
+
+    </LinearLayout>
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="10"
+        >
+        <com.google.android.gms.ads.AdView
+            xmlns:ads="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/fex_BottomBanner"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            ads:adSize="BANNER"
+            android:layout_gravity="center"
+            ads:layout_constraintStart_toStartOf="parent"
+            ads:layout_constraintEnd_toEndOf="parent"
+            ads:layout_constraintBottom_toBottomOf="parent"
+            ads:adUnitId="ca-app-pub-7757208400023961/6871868092">
+        </com.google.android.gms.ads.AdView>
+    </FrameLayout>
+
+</LinearLayout>

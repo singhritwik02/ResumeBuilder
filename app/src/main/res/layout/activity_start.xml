@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white"
+    android:weightSum="100"
+    tools:context=".StartActivity">
+    <com.airbnb.lottie.LottieAnimationView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="70"
+        app:lottie_autoPlay="true"
+        app:lottie_loop="true"
+        android:layout_margin="32dp"
+        app:lottie_rawRes="@raw/start_screen_animation"
+        android:transitionName="transition_homeAnimation"
+        android:id="@+id/fss_Animation"
+        />
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="30"
+
+        >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_gravity="center"
+            android:id="@+id/fss_ContinueButton"
+            android:padding="16dp"
+            >
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Build Your Resume"
+                android:fontFamily="@font/quicksand_regular"
+                android:textColor="@color/black"
+                android:autoSizeTextType="uniform"
+                android:autoSizeMaxTextSize="40sp"
+                android:textSize="28sp"
+                android:textAlignment="center"
+                android:id="@+id/fss_BuildText"
+                android:transitionName="transition_create_your_resume"
+
+                />
+            <ImageView
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:src="@drawable/baseline_keyboard_arrow_right_24"
+                android:layout_gravity="center"
+                app:tint="@color/black" />
+
+        </LinearLayout>
+    </FrameLayout>
+
+
+
+</LinearLayout>

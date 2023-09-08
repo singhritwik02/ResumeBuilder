@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="150dp"
+    android:layout_height="match_parent"
+
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/background_preview"
+        android:layout_margin="4dp"
+        >
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="..."
+        android:fontFamily="@font/quicksand_semibold"
+        android:textSize="40sp"
+        android:layout_gravity="center"
+        android:id="@+id/slph_LoadingImage"
+        />
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:scaleType="centerInside"
+        android:id="@+id/slph_PreviewImage"
+
+        />
+    </FrameLayout>
+</FrameLayout>

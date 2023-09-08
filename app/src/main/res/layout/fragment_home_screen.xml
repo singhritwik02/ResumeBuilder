@@ -1,0 +1,614 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    android:weightSum="100"
+    tools:context=".fragments.HomeScreenFragment">
+
+    <LinearLayout
+        android:id="@+id/fhs_HomeTopLayout"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="45"
+        android:orientation="vertical"
+        android:weightSum="100"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+        <com.airbnb.lottie.LottieAnimationView
+            android:layout_width="wrap_content"
+            android:layout_height="200dp"
+            android:layout_margin="8dp"
+            android:transitionName="transition_homeAnimation"
+            app:lottie_autoPlay="true"
+            app:lottie_loop="true"
+            app:lottie_rawRes="@raw/start_screen_animation" />
+
+        <TextView
+            android:id="@+id/fhs_TopLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            android:fontFamily="@font/quicksand_regular"
+            android:text="Build Your Resume"
+            android:textColor="@color/black"
+            android:textSize="28sp"
+            android:transitionName="transition_create_your_resume"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="16dp"
+        android:layout_weight="50"
+        app:layout_constrainedHeight="true"
+        app:layout_constraintBottom_toTopOf="@id/fhs_BottomBanner"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/fhs_HomeTopLayout">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+
+            android:orientation="vertical">
+            <!--            preview card -->
+            <FrameLayout
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="4dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginBottom="4dp"
+                android:background="@drawable/background_curved_corner"
+                app:cardBackgroundColor="@color/white"
+                android:padding="16dp"
+                app:cardCornerRadius="24dp">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:weightSum="100">
+
+                    <LinearLayout
+                        android:id="@+id/fhs_PreviewBanner"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_weight="50"
+
+                        >
+                    <ImageView
+                        android:id="@+id/fhs_PreviewImage"
+                        android:layout_width="wrap_content"
+                        android:layout_height="120dp"
+                        android:layout_margin="16dp"
+                        android:layout_weight="50"
+                        android:src="@drawable/personal_info_image" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="60"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/fhs_PreviewLabel"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+
+                            android:fontFamily="@font/nunito_bold"
+                            android:text="Preview Resume"
+                            android:textColor="@color/darkGreen"
+                            android:maxLines="1"
+                            android:ellipsize="end"
+                            android:textSize="18sp"
+                            />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_weight="50"
+                        android:id="@+id/fhs_QRBanner"
+                        >
+                        <ImageView
+                            android:id="@+id/fhs_QRImage"
+                            android:layout_width="wrap_content"
+                            android:layout_height="120dp"
+                            android:layout_margin="16dp"
+                            android:layout_weight="50"
+                            android:src="@drawable/qr_code_image" />
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_weight="60"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/fhs_QRLabel"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+
+                                android:fontFamily="@font/nunito_bold"
+                                android:text="QR Resume"
+                                android:textColor="@color/darkGreen"
+                                android:textSize="18sp"
+                                android:maxLines="1"
+                                android:ellipsize="end"
+                                />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+                </LinearLayout>
+            </FrameLayout>
+            <!--            Choose Profile Image Card-->
+            <FrameLayout
+                android:id="@+id/fhs_ChooseProfileImageCard"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="4dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginBottom="4dp"
+                android:background="@drawable/background_curved_corner"
+                app:cardBackgroundColor="@color/white"
+                app:cardCornerRadius="24dp">
+
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:weightSum="100">
+
+                    <ImageView
+
+                        android:layout_width="0dp"
+                        android:layout_height="120dp"
+                        android:layout_margin="16dp"
+                        android:layout_weight="40"
+                        android:src="@drawable/profile_image"
+                        android:transitionName="transition_Image" />
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="60"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_weight="60"
+                            android:fontFamily="@font/nunito_bold"
+                            android:gravity="center"
+                            android:text="Profile Image"
+                            android:textColor="@color/darkGreen"
+                            android:textSize="20sp"
+                            android:transitionName="transition_Title" />
+
+                        <TextView
+                            android:id="@+id/fhs_ProfileImageProgress"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:background="@drawable/background_red_box"
+                            android:fontFamily="@font/quicksand_semibold"
+                            android:padding="4dp"
+                            android:text="INCOMPLETE"
+                            android:textColor="@color/white"
+                            android:textSize="8sp" />
+                    </LinearLayout>
+
+                </LinearLayout>
+            </FrameLayout>            <!--            personal info card-->
+            <FrameLayout
+                android:id="@+id/fhs_PersonalDetailsBanner"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="4dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginBottom="4dp"
+                android:background="@drawable/background_curved_corner"
+                app:cardBackgroundColor="@color/white"
+                app:cardCornerRadius="24dp">
+
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:weightSum="100">
+
+                    <ImageView
+                        android:id="@+id/fhs_PersonalDetailsImage"
+                        android:layout_width="0dp"
+                        android:layout_height="120dp"
+                        android:layout_margin="16dp"
+                        android:layout_weight="40"
+                        android:src="@drawable/personal_info_image"
+                        android:transitionName="transition_Image" />
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="60"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/fhs_PersonalDetailsLabel"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_weight="60"
+                            android:fontFamily="@font/nunito_bold"
+                            android:gravity="center"
+                            android:text="Personal Details"
+                            android:textColor="@color/darkGreen"
+                            android:textSize="20sp"
+                            android:transitionName="transition_Title" />
+
+                        <TextView
+                            android:id="@+id/fhs_PersonalDetailsProgress"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:background="@drawable/background_red_box"
+                            android:fontFamily="@font/quicksand_semibold"
+                            android:padding="4dp"
+                            android:text="INCOMPLETE"
+                            android:textColor="@color/white"
+                            android:textSize="8sp" />
+                    </LinearLayout>
+
+                </LinearLayout>
+            </FrameLayout>
+
+            <!--            essentials card-->
+            <FrameLayout
+                android:id="@+id/fhs_EssentialsBanner"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="4dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginBottom="4dp"
+                android:background="@drawable/background_curved_corner"
+                app:cardBackgroundColor="@color/white"
+                app:cardCornerRadius="24dp">
+
+                <LinearLayout
+                    android:id="@+id/fhs_EssentialPageBanner"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:weightSum="100">
+
+                    <ImageView
+                        android:id="@+id/fhs_EssentialsImage"
+                        android:layout_width="0dp"
+                        android:layout_height="120dp"
+                        android:layout_margin="16dp"
+                        android:layout_weight="40"
+                        android:src="@drawable/essentials_page_image" />
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="60"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/fhs_EssentialsLabel"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+
+                                android:fontFamily="@font/nunito_bold"
+                                android:text="Essentials"
+                                android:textColor="@color/darkGreen"
+                                android:textSize="20sp" />
+
+                            <TextView
+                                android:id="@+id/fhs_essentialsProgress"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:background="@drawable/background_red_box"
+                                android:fontFamily="@font/quicksand_regular"
+                                android:padding="4dp"
+                                android:text="INCOMPLETE"
+                                android:textColor="@color/white"
+                                android:textSize="8sp" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                </LinearLayout>
+            </FrameLayout>
+            <!--            projects card-->
+            <FrameLayout
+                android:id="@+id/fhs_ProjectsBanner"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="4dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginBottom="4dp"
+                android:background="@drawable/background_curved_corner"
+                app:cardBackgroundColor="@color/white"
+                app:cardCornerRadius="24dp">
+
+                <LinearLayout
+
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:weightSum="100">
+
+                    <ImageView
+                        android:id="@+id/fhs_ProjectsImage"
+                        android:layout_width="0dp"
+                        android:layout_height="120dp"
+                        android:layout_margin="16dp"
+                        android:layout_weight="40"
+                        android:src="@drawable/projects_image" />
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="60"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/fhs_ProjecsLabel"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_weight="60"
+                            android:fontFamily="@font/nunito_bold"
+                            android:text="Projects"
+                            android:textColor="@color/darkGreen"
+                            android:textSize="20sp" />
+
+                        <TextView
+                            android:id="@+id/fhs_ProjectsProgress"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:background="@drawable/background_red_box"
+                            android:fontFamily="@font/quicksand_regular"
+                            android:padding="4dp"
+                            android:text="INCOMPLETE"
+                            android:textColor="@color/white"
+                            android:textSize="8sp" />
+                    </LinearLayout>
+
+                </LinearLayout>
+            </FrameLayout>
+            <!--            schools card-->
+            <FrameLayout
+                android:id="@+id/fhs_SchoolsBanner"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="16dp"
+                android:background="@drawable/background_curved_corner"
+                app:cardBackgroundColor="@color/white"
+                app:cardCornerRadius="24dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:weightSum="100">
+
+                    <ImageView
+                        android:id="@+id/fhs_SchoolsImage"
+                        android:layout_width="0dp"
+                        android:layout_height="120dp"
+                        android:layout_margin="16dp"
+                        android:layout_weight="40"
+                        android:src="@drawable/school_image" />
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="60"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/fhs_SchoolsLabel"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+
+                            android:fontFamily="@font/nunito_bold"
+                            android:text="Education"
+                            android:textColor="@color/darkGreen"
+                            android:textSize="20sp" />
+
+                        <TextView
+                            android:id="@+id/fhs_educationProgress"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:background="@drawable/background_red_box"
+                            android:fontFamily="@font/quicksand_regular"
+                            android:padding="4dp"
+                            android:text="INCOMPLETE"
+                            android:textColor="@color/white"
+                            android:textSize="8sp" />
+                    </LinearLayout>
+                </LinearLayout>
+            </FrameLayout>
+            <!--            experience card-->
+            <FrameLayout
+                android:id="@+id/fhs_ExperienceBanner"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="4dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginBottom="4dp"
+                android:background="@drawable/background_curved_corner"
+                app:cardBackgroundColor="@color/white"
+                app:cardCornerRadius="24dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:weightSum="100">
+
+                    <ImageView
+                        android:id="@+id/fhs_ExperienceImage"
+                        android:layout_width="0dp"
+                        android:layout_height="120dp"
+                        android:layout_margin="16dp"
+                        android:layout_weight="40"
+                        android:src="@drawable/experience_image" />
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="60"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/fhs_ExperienceLabel"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_weight="60"
+                            android:fontFamily="@font/nunito_bold"
+                            android:text="Experiences"
+                            android:textColor="@color/darkGreen"
+                            android:textSize="20sp" />
+
+                        <TextView
+                            android:id="@+id/fhs_ExperienceProgress"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:background="@drawable/background_red_box"
+                            android:padding="4dp"
+                            android:text="INCOMPLETE"
+                            android:textColor="@color/white"
+                            android:textSize="8sp" />
+
+
+                    </LinearLayout>
+
+                </LinearLayout>
+            </FrameLayout>
+            <!--            Certifications card-->
+            <FrameLayout
+                android:id="@+id/fhs_CertificationsBanner"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="4dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginBottom="4dp"
+                android:background="@drawable/background_curved_corner"
+                app:cardBackgroundColor="@color/white"
+                app:cardCornerRadius="24dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:weightSum="100">
+
+                    <ImageView
+                        android:id="@+id/fhs_CertificationImage"
+                        android:layout_width="0dp"
+                        android:layout_height="120dp"
+                        android:layout_margin="16dp"
+                        android:layout_weight="40"
+                        android:src="@drawable/certifications_image" />
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="60"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/fhs_CertificationLabel"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_weight="60"
+                            android:fontFamily="@font/nunito_bold"
+                            android:text="Certifications"
+                            android:textColor="@color/darkGreen"
+                            android:textSize="20sp" />
+
+
+                    </LinearLayout>
+
+                </LinearLayout>
+            </FrameLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="5">
+
+        <com.google.android.gms.ads.AdView xmlns:ads="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/fhs_BottomBanner"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_gravity="center"
+            ads:adSize="BANNER"
+            ads:adUnitId="ca-app-pub-7757208400023961/2990981765"
+            ads:layout_constraintBottom_toBottomOf="parent"
+            ads:layout_constraintEnd_toEndOf="parent"
+            ads:layout_constraintStart_toStartOf="parent"></com.google.android.gms.ads.AdView>
+    </FrameLayout>
+
+</LinearLayout>

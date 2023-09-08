@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <string name="navigation_personal_info">المعلومات الشخصة</string>
+    <string name="navigation_essentials">معلومات  أساسية</string>
+    <string name="navigation_projects">المشاريع</string>
+    <string name="navigation_education">التعليم</string>
+    <string name="navigation_experience">الخبرة</string>
+    <string name="navigation_awards" tools:keep="@string/navigation_awards">الجوائز</string>
+    <string name="navigation_preview">معاينة</string>
+
+    <string name="action_print">طباعة</string>
+
+    <string name="hint_project_name">إسم المشروع</string>
+    <string name="hint_skills">المهارات</string>
+    <string name="hint_languages">اللغات</string>
+
+    <string name="education">التعليم</string>
+</resources>

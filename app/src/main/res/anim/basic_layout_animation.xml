@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layoutAnimation android:direction="left_to_right" xmlns:android="http://schemas.android.com/apk/res/android"
+    android:delay="18%"
+    android:animation="@anim/recycler_animation"
+    android:animationOrder="normal">
+
+</layoutAnimation>

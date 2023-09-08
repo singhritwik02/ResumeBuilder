@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "1026059244878",
+    "project_id": "resume-buildr-c377f",
+    "storage_bucket": "resume-buildr-c377f.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1026059244878:android:165a74a02616ac22c7fa1f",
+        "android_client_info": {
+          "package_name": "com.ritwik.resumebuilder"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1026059244878-4h55vnnr2n42mjd275tlq0r58ktufdm0.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDjKtIJbgTPKCPN4MUWwFp8A3S8bYvcnAA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1026059244878-4h55vnnr2n42mjd275tlq0r58ktufdm0.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

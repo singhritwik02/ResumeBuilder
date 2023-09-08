@@ -1,0 +1,308 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:weightSum="100"
+
+    tools:context="fragments.PersonalInfoFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="20"
+        android:background="@drawable/personal_details_background"
+        android:orientation="horizontal"
+        android:weightSum="100">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="16dp"
+            android:layout_weight="60"
+            android:fontFamily="@font/nunito_bold"
+            android:text="Personal Details"
+            android:transitionName="transition_Title"
+            android:textColor="@color/darkGreen"
+            android:textSize="32sp" />
+
+
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:layout_weight="40"
+            android:transitionName="transition_Image"
+            android:src="@drawable/personal_info_image" />
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="70">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layoutAnimation="@anim/basic_layout_animation"
+            android:padding="16dp">
+
+            <LinearLayout
+                android:id="@+id/input_layout_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"
+                android:orientation="horizontal"
+                android:weightSum="100">
+
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="20"
+                    android:src="@drawable/name_icon" />
+
+                <EditText
+                    android:id="@+id/input_name"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="80"
+                    android:background="@drawable/green_field_background"
+                    android:fontFamily="@font/nunito_bold"
+                    android:hint="Name"
+                    android:inputType="textCapWords"
+                    android:paddingStart="16dp"
+                    android:paddingTop="20dp"
+                    android:paddingEnd="16dp"
+                    android:paddingBottom="20dp"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/darkGreen" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/input_layout_job_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"
+                android:orientation="horizontal"
+                android:weightSum="100">
+
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="20"
+                    android:src="@drawable/job_icon" />
+
+                <EditText
+                    android:id="@+id/input_job_title"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="80"
+                    android:background="@drawable/green_field_background"
+                    android:fontFamily="@font/nunito_bold"
+                    android:hint="Job"
+                    android:inputType="textCapWords"
+                    android:paddingStart="16dp"
+                    android:paddingTop="20dp"
+                    android:paddingEnd="16dp"
+                    android:paddingBottom="20dp"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/darkGreen" />
+            </LinearLayout>
+
+
+            <LinearLayout
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"
+
+                android:orientation="horizontal"
+                android:weightSum="100">
+
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="20"
+                    android:src="@drawable/address_icon" />
+
+                <EditText
+                    android:id="@+id/input_address1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="80"
+                    android:background="@drawable/green_field_background"
+                    android:fontFamily="@font/nunito_bold"
+                    android:hint="Address"
+                    android:inputType="text"
+                    android:paddingStart="16dp"
+                    android:paddingTop="20dp"
+                    android:paddingEnd="16dp"
+                    android:paddingBottom="20dp"
+                    android:textColor="@color/black"
+
+                    android:textColorHint="@color/darkGreen" />
+            </LinearLayout>
+
+            <LinearLayout
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"
+
+                android:orientation="horizontal"
+                android:weightSum="100">
+
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="20"
+                    android:src="@drawable/address_icon" />
+
+                <EditText
+                    android:id="@+id/input_address2"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="80"
+                    android:background="@drawable/green_field_background"
+                    android:fontFamily="@font/nunito_bold"
+                    android:hint="Address Line 2"
+                    android:inputType="text"
+                    android:paddingStart="16dp"
+                    android:paddingTop="20dp"
+                    android:paddingEnd="16dp"
+                    android:paddingBottom="20dp"
+                    android:textColor="@color/black"
+
+                    android:textColorHint="@color/darkGreen" />
+            </LinearLayout>
+
+            <LinearLayout
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"
+                android:orientation="horizontal"
+                android:weightSum="100">
+
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="20"
+                    android:src="@drawable/mail_icon" />
+
+                <EditText
+                    android:id="@+id/input_email"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="80"
+                    android:background="@drawable/green_field_background"
+                    android:fontFamily="@font/nunito_bold"
+                    android:hint="Mail"
+                    android:inputType="textEmailAddress"
+                    android:paddingStart="16dp"
+                    android:paddingTop="20dp"
+                    android:paddingEnd="16dp"
+                    android:paddingBottom="20dp"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/darkGreen" />
+            </LinearLayout>
+
+            <LinearLayout
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"
+                android:orientation="horizontal"
+                android:weightSum="100">
+
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="20"
+                    android:src="@drawable/phone_icon" />
+
+                <EditText
+                    android:id="@+id/input_phone"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="80"
+                    android:background="@drawable/green_field_background"
+                    android:fontFamily="@font/nunito_bold"
+                    android:hint="Phone"
+                    android:inputType="phone"
+                    android:paddingStart="16dp"
+                    android:paddingTop="20dp"
+                    android:paddingEnd="16dp"
+                    android:paddingBottom="20dp"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/darkGreen"/>
+            </LinearLayout>
+            <LinearLayout
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"
+                android:orientation="horizontal"
+                android:weightSum="100">
+
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="20"
+                    android:src="@drawable/star_svgrepo_com"
+                    app:tint="@color/darkGreen" />
+
+                <EditText
+                    android:id="@+id/input_IntroLine"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="80"
+                    android:background="@drawable/green_field_background"
+                    android:fontFamily="@font/nunito_bold"
+                    android:hint="Intro Line"
+                    android:inputType="text"
+                    android:paddingStart="16dp"
+                    android:paddingTop="20dp"
+                    android:paddingEnd="16dp"
+                    android:paddingBottom="20dp"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/darkGreen"/>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="10"
+        >
+        <com.google.android.gms.ads.AdView
+            xmlns:ads="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/fpi_BottomBanner"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            ads:adSize="BANNER"
+            android:layout_gravity="center"
+            ads:layout_constraintStart_toStartOf="parent"
+            ads:layout_constraintEnd_toEndOf="parent"
+            ads:layout_constraintBottom_toBottomOf="parent"
+            ads:adUnitId="ca-app-pub-7757208400023961/9945071226">
+        </com.google.android.gms.ads.AdView>
+    </FrameLayout>
+</LinearLayout>

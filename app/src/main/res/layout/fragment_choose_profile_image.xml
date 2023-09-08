@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:weightSum="100"
+    tools:context=".fragments.ChooseProfileImageFragment">
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="10"
+        android:background="@drawable/orange_background"
+        >
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Choose Profile Image"
+        android:fontFamily="@font/nunito_bold"
+        android:textColor="@color/white"
+        android:layout_margin="16dp"
+        android:textSize="24sp"
+        android:layout_weight="10"
+        android:gravity="center"
+        />
+    </FrameLayout>
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="50"
+        >
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="50"
+        android:src="@drawable/choose_image_placeholder"
+        android:id="@+id/fcpi_ImageView"
+        android:scaleType="centerInside"
+        android:layout_margin="8dp"
+        />
+    </FrameLayout>
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="30"
+        >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_gravity="bottom"
+            android:gravity="center"
+            android:layout_margin="16dp"
+            >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Save"
+                android:textColor="@color/darkOrange"
+                android:id="@+id/fcpi_Save"
+                android:textSize="18sp"
+                android:fontFamily="@font/nunito_bold"
+                android:layout_margin="8dp"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Delete"
+                android:id="@+id/fcpi_Delete"
+                android:textSize="18sp"
+                android:fontFamily="@font/nunito_bold"
+                android:textColor="@android:color/darker_gray"
+                android:layout_margin="8dp"
+                />
+
+
+        </LinearLayout>
+    </FrameLayout>
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="10"
+        >
+        <com.google.android.gms.ads.AdView
+            xmlns:ads="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/cpif_BottomBanner"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            ads:adSize="BANNER"
+            android:layout_gravity="center"
+            ads:layout_constraintStart_toStartOf="parent"
+            ads:layout_constraintEnd_toEndOf="parent"
+            ads:layout_constraintBottom_toBottomOf="parent"
+            ads:adUnitId="ca-app-pub-7757208400023961/4373983645">
+        </com.google.android.gms.ads.AdView>
+    </FrameLayout>
+
+
+
+
+
+</LinearLayout>

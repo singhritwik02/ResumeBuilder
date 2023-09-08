@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="navigation_personal_info">Persönliche Infos</string>
+    <string name="navigation_essentials">Wesentliches</string>
+    <string name="navigation_projects">Projekte</string>
+    <string name="navigation_education">Schule</string>
+    <string name="navigation_experience">Erfahrungen</string>
+    <string name="navigation_awards">Auszeichnungen</string>
+    <string name="navigation_preview">Vorschau</string>
+    <string name="action_print">Drucken</string>
+    <string name="hint_project_name">Projekt Name</string>
+    <string name="hint_skills">Fähigkeiten</string>
+    <string name="hint_languages">Sprachen</string>
+    <string name="education">Ausbildung</string>
+</resources>
